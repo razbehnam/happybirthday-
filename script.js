@@ -2,7 +2,11 @@ function openLetter(){
 
     document.getElementById("letter").classList.remove("hidden");
 
+    const music = document.getElementById("bgMusic");
+    music.play();
+
 }
+
 
 
 
