@@ -21,14 +21,14 @@ btn.addEventListener("mouseover", () => {
         btn.style.top = y + "px";
 
         if (tries == 1)
-            text.innerHTML = "😂 عه ببخشید... دوباره بزن روش";
+            text.innerHTML = "😂 عه ببخشید دستم خورد... دوباره بزن روش";
 
         if (tries == 2)
-            text.innerHTML = "🤣 نزدیک بود... یه بار دیگه";
+            text.innerHTML = " نزدیک بود... یه بار دیگه ببخشید عشقم";
 
         if (tries == 3) {
 
-            text.innerHTML = "🥹 باشه باشه... این دفعه میتونی بازش کنی ❤️";
+            text.innerHTML = " باشه باشه... این دفعه میتونی بازش کنی ❤️";
 
             btn.style.position = "relative";
             btn.style.left = "0";
@@ -125,7 +125,7 @@ function createHearts(){
 
             heart.className="floating-heart";
 
-            heart.innerHTML="❤️";
+            heart.innerHTML="❤️🌟";
 
             heart.style.left=Math.random()*100+"vw";
 
