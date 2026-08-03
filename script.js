@@ -3,93 +3,58 @@ let tries = 0;
 const btn = document.getElementById("loveBtn");
 const text = document.getElementById("funText");
 
-btn.addEventListener("mouseover", moveButton);
-btn.addEventListener("touchstart", function(e){
-    if (tries < 3){
-        e.preventDefault();
-        moveButton();
-    }
-});
-
-function moveButton() {
-
-    if (tries >= 3) return;
-
-    tries++;
-
-    btn.style.position = "fixed";
-
-    if (tries === 1) {
-        btn.style.left = "15%";
-        btn.style.top = "55%";
-        text.innerHTML = "😂 عه ببخشید عشقم دستم خورد... دوباره بزن روش";
-    }
-
-    if (tries === 2) {
-        btn.style.left = "65%";
-        btn.style.top = "55%";
-        text.innerHTML = "😂 نزدیک بود... یه بار دیگه بزن ببخشید عشقم";
-    }
-
-    if (tries === 3) {
-        btn.style.position = "relative";
-        btn.style.left = "0";
-        btn.style.top = "0";
-        text.innerHTML = "❤️  باشه باشه... این دفعه میتونی بازش کنی تا سه نشه بازی نشه";
-    }
-
-}
-
-
-btn.addEventListener("mouseover", runButton);
-
-
-btn.addEventListener("touchstart", (e) => {
+btn.addEventListener("mouseover", () => {
 
     if (tries < 3) {
 
-        e.preventDefault();
-        runButton();
+        tries++;
 
+        if (tries === 1) {
+            btn.style.transform = "translateX(-100px)";
+            text.innerHTML = "😂 عه ببخشید دستم خورد... دوباره بزن روش";
+        }
+
+        if (tries === 2) {
+            btn.style.transform = "translateX(100px)";
+            text.innerHTML = "😂 نزدیک بود... یه بار دیگه ببخشید عشقم";
+        }
+
+        if (tries === 3) {
+            btn.style.transform = "translateX(0)";
+            text.innerHTML = "❤️ باشه باشه... این دفعه میتونی بازش کنی";
+        }
     }
 
 });
 
 
-
-// =====================
-// باز شدن نامه
-// =====================
-
 btn.addEventListener("click", () => {
 
-    document
-        .getElementById("letter")
-        .classList
-        .remove("hidden");
+    if (tries < 3) return;
 
     document
-        .getElementById("letter")
-        .classList
-        .remove("hidden");
+    .getElementById("letter")
+    .classList
+    .remove("hidden");
 
-    const music =
-        document.getElementById("bgMusic");
+
+    const music = document.getElementById("bgMusic");
 
     music.play().catch(()=>{});
 
+
     createHearts();
+
 
     window.scrollTo({
 
-        top:document.getElementById("letter").offsetTop,
+        top: document.getElementById("letter").offsetTop,
 
         behavior:"smooth"
 
     });
 
 });
-
 
 
 
