@@ -12,26 +12,22 @@ html{
     scroll-behavior:smooth;
 }
 
-body{
+body {
 
-    font-family:Tahoma,sans-serif;
+    font-family: Tahoma, sans-serif;
 
-    background:linear-gradient(135deg,#ffdde8,#ffeef6,#ffffff);
-
-    min-height:100vh;
-
-    color:#5c1a37;
-
-    overflow-x:hidden;
-
-    position:relative;
-
-}
-body{
     background-image: url("images/background.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    min-height: 100vh;
+
+    color: #5c1a37;
+
+    overflow-x: hidden;
+
+    position: relative;
 }
 
 
