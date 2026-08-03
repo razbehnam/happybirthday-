@@ -460,7 +460,10 @@ body{
     font-size:20px;
 
 }
-
+.music audio{
+    width: 300px;
+    margin-top: 20px;
+}
 
 
 /* ===========================
