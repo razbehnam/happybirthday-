@@ -262,7 +262,8 @@ section, .hero, .music, .letter {
 #loveBtn:hover{
 
     transform:scale(1.08);
-
+    position: relative;
+    z-index: 999;
 }
 
 
