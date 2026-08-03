@@ -160,9 +160,10 @@ section, .hero, .music, .letter {
 
 .hero{
 
-    width:100%;
+    width:85%;
+    max-width:600px;
 
-    min-height:100vh;
+    min-height:auto;
 
     display:flex;
 
@@ -174,7 +175,17 @@ section, .hero, .music, .letter {
 
     text-align:center;
 
-    padding:30px;
+    padding:40px 30px;
+
+    margin:80px auto;
+
+    background:rgba(255,255,255,0.75);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.2);
 
 }
 
