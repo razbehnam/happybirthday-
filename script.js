@@ -63,8 +63,10 @@ btn.addEventListener("touchstart", (e) => {
 
 btn.addEventListener("click", () => {
 
-    if (tries < 3)
-        return;
+    document
+        .getElementById("letter")
+        .classList
+        .remove("hidden");
 
     document
         .getElementById("letter")
