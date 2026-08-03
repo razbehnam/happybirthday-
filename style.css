@@ -254,7 +254,9 @@ section, .hero, .music, .letter {
     touch-action: manipulation;
 
     -webkit-tap-highlight-color: transparent;
-
+   
+    position: relative;
+   
     z-index:10;
 }
 
@@ -262,8 +264,7 @@ section, .hero, .music, .letter {
 #loveBtn:hover{
 
     transform:scale(1.08);
-    position: relative;
-    z-index: 999;
+
 }
 
 
