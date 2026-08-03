@@ -3,38 +3,39 @@ let tries = 0;
 const btn = document.getElementById("loveBtn");
 const text = document.getElementById("funText");
 
-function runButton() {
+btn.addEventListener("mouseover", moveButton);
+btn.addEventListener("touchstart", function(e){
+    if (tries < 3){
+        e.preventDefault();
+        moveButton();
+    }
+});
 
-    if (tries < 3) {
+function moveButton() {
 
-        tries++;
+    if (tries >= 3) return;
 
-const x = Math.max(20, Math.random() * (window.innerWidth - btn.offsetWidth - 40));
-const y = Math.max(20, Math.random() * (window.innerHeight - btn.offsetHeight - 40));
-btn.style.zIndex = "9999";
-        btn.style.position = "fixed";
-        btn.style.left = x + "px";
-        btn.style.top = y + "px";
+    tries++;
 
+    btn.style.position = "fixed";
 
-        if (tries == 1)
-            text.innerHTML = "😂 عه ببخشید دستم خورد... دوباره بزن روش";
+    if (tries === 1) {
+        btn.style.left = "15%";
+        btn.style.top = "55%";
+        text.innerHTML = "😂 عه ببخشید عشقم دستم خورد... دوباره بزن روش";
+    }
 
+    if (tries === 2) {
+        btn.style.left = "65%";
+        btn.style.top = "55%";
+        text.innerHTML = "😂 نزدیک بود... یه بار دیگه بزن ببخشید عشقم";
+    }
 
-        if (tries == 2)
-            text.innerHTML = "نزدیک بود... یه بار دیگه ببخشید عشقم";
-
-
-        if (tries == 3) {
-
-            text.innerHTML = "باشه باشه... این دفعه میتونی بازش کنی ❤️";
-
-            btn.style.position = "relative";
-            btn.style.left = "0";
-            btn.style.top = "0";
-
-        }
-
+    if (tries === 3) {
+        btn.style.position = "relative";
+        btn.style.left = "0";
+        btn.style.top = "0";
+        text.innerHTML = "❤️  باشه باشه... این دفعه میتونی بازش کنی تا سه نشه بازی نشه";
     }
 
 }
