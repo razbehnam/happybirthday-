@@ -251,8 +251,12 @@ section, .hero, .music, .letter {
 
     box-shadow:0 12px 35px rgba(233,30,99,.35);
 
-}
+    touch-action: manipulation;
 
+    -webkit-tap-highlight-color: transparent;
+
+    z-index:10;
+}
 
 
 #loveBtn:hover{
@@ -260,7 +264,6 @@ section, .hero, .music, .letter {
     transform:scale(1.08);
 
 }
-
 
 
 #funText{
