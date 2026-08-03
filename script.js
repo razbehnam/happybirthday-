@@ -9,9 +9,9 @@ function runButton() {
 
         tries++;
 
-        const x = Math.random() * (window.innerWidth - btn.offsetWidth);
-        const y = Math.random() * (window.innerHeight - btn.offsetHeight);
-
+const x = Math.max(20, Math.random() * (window.innerWidth - btn.offsetWidth - 40));
+const y = Math.max(20, Math.random() * (window.innerHeight - btn.offsetHeight - 40));
+btn.style.zIndex = "9999";
         btn.style.position = "fixed";
         btn.style.left = x + "px";
         btn.style.top = y + "px";
