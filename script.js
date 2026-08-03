@@ -1,43 +1,47 @@
-// =====================
-// دکمه فراری
-// =====================
-
 let tries = 0;
 
 const btn = document.getElementById("loveBtn");
 const text = document.getElementById("funText");
 
-btn.addEventListener("mouseover", () => {
+function runButton() {
 
     if (tries < 3) {
 
         tries++;
 
-        const x = Math.random() * (window.innerWidth - 220);
-        const y = Math.random() * (window.innerHeight - 120);
+        const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - btn.offsetHeight);
 
         btn.style.position = "fixed";
         btn.style.left = x + "px";
         btn.style.top = y + "px";
 
         if (tries == 1)
-            text.innerHTML = "😂 عه ببخشید دستم خورد... دوباره بزن روش";
+            text.innerHTML = "😂 عه ببخشید دستم خورد دلقک بازی کردم";
 
         if (tries == 2)
-            text.innerHTML = " نزدیک بود... یه بار دیگه ببخشید عشقم";
+            text.innerHTML = "... یه بار دیگه ببخشید عشقم";
 
         if (tries == 3) {
 
-            text.innerHTML = " باشه باشه... این دفعه میتونی بازش کنی ❤️";
+            text.innerHTML = "باشه باشه... این دفعه میتونی بازش کنی تا 3 نشه بازی نشه ❤️";
 
             btn.style.position = "relative";
             btn.style.left = "0";
             btn.style.top = "0";
 
         }
-
     }
+}
 
+btn.addEventListener("mouseover", runButton);
+
+// برای گوشی
+btn.addEventListener("touchstart", (e) => {
+    if (tries < 3) {
+        e.preventDefault();
+        runButton();
+    }
 });
 
 
